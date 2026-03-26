@@ -31,3 +31,15 @@ filtre_anomalie(df_d_0105)
 filtre_anomalie(df_d_1506)
 ```
 
+question 3
+```{r}
+compter_nombre_trajets <- function(df){
+  sum(df$Total, na.rm = TRUE)
+}
+
+compter_nombre_trajets(df_b_788)
+compter_nombre_trajets(df_b_805)
+compter_nombre_trajets(df_d_0105)
+compter_nombre_trajets(df_d_1506)
+```
+
