@@ -4,21 +4,30 @@ format: html
 editor: visual
 ---
 ```{r}
-df_velo<- read.csv("244400404_comptages-velo-nantes-metropole.csv")
+df_velo<- read.csv("244400404_comptages-velo-nantes-metropole.csv", sep=";", stringsAsFactors = FALSE)
+str(df_velo)
 ```
 
 question 1
 ```{r}
-df_b_788 <- df_velo[df_velo$boucle == 788, ]
-df_b_805 <- df_velo[df_velo$boucle == 805, ]
+df_b_788 <- df_velo[df_velo$Numéro.de.boucle == 745, ] 
+df_b_805 <- df_velo[df_velo$Numéro.de.boucle == 987, ]
 
 # df jours
-df_d_0105 <- df_velo[df_velo$date == "2022-05-01", ]
-df_d_1506 <- df_velo[df_velo$date == "2022-06-15", ]
+df_d_0105 <- df_velo[df_velo$Jour == "2025-02-01", ]
+df_d_1506 <- df_velo[df_velo$Jour == "2025-08-15", ]
 ```
 
 question 2
 ```{r}
+filtre_anomalie <- function(df) {
+  df_filtre <- df[!(df$anomalie %in% c("Forte", "Faible")), ]
+  return(df_filtre)
+}
 
+filtre_anomalie(df_b_788)
+filtre_anomalie(df_b_805)
+filtre_anomalie(df_d_0105)
+filtre_anomalie(df_d_1506)
 ```
 
