@@ -42,4 +42,16 @@ compter_nombre_trajets(df_b_805)
 compter_nombre_trajets(df_d_0105)
 compter_nombre_trajets(df_d_1506)
 ```
+question 4
+```{r}
+nombre_boucles <- function(df){
+  length(unique(df$Numéro.de.boucle))
+}
+nombre_boucles(df_velo)
+nombre_boucles(df_b_788)
+nombre_boucles(df_b_805)
+nombre_boucles(df_d_0105)
+nombre_boucles(df_d_1506)
+```
+
 
