@@ -12,8 +12,13 @@ question 1
 df_b_788 <- df_velo[df_velo$boucle == 788, ]
 df_b_805 <- df_velo[df_velo$boucle == 805, ]
 
-# jours
+# df jours
 df_d_0105 <- df_velo[df_velo$date == "2022-05-01", ]
 df_d_1506 <- df_velo[df_velo$date == "2022-06-15", ]
+```
+
+question 2
+```{r}
+
 ```
 
