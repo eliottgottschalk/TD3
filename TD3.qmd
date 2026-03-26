@@ -1,0 +1,19 @@
+---
+title: "TD3"
+format: html
+editor: visual
+---
+```{r}
+df_velo<- read.csv("244400404_comptages-velo-nantes-metropole.csv")
+```
+
+question 1
+```{r}
+df_b_788 <- df_velo[df_velo$boucle == 788, ]
+df_b_805 <- df_velo[df_velo$boucle == 805, ]
+
+# jours
+df_d_0105 <- df_velo[df_velo$date == "2022-05-01", ]
+df_d_1506 <- df_velo[df_velo$date == "2022-06-15", ]
+```
+
